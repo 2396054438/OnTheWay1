@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,6 +8,19 @@
     android:orientation="vertical"
     tools:context="com.cd.ontheway.MainActivity">
 
+    <include
+        layout="@layout/item_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
+    <!--NavigationView的宽可以是wrap_content也可以是match_parent,不影响侧边拉出的宽度-->
+    <!--android:layout_gravity="end"这个有的时候快捷键联想不出来，需要手敲，start:表示从左边拉出侧滑，end表示从右边,
+    且只能填这两个值，其他的值，填了会崩溃-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigationview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/item_navigate"/>
 
-</LinearLayout>
+</android.support.v4.widget.DrawerLayout>
