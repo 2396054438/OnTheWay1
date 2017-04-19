@@ -5,9 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.cd.ontheway.MainActivity">
-
+    tools:context="com.cd.ontheway.MainActivity"
+    tools:openDrawer="start">
+    <!--Drawlayout与navigationView都要设置fitSystemWindows属性，并指定为true
+    Drawlayout的openDrawer与NavigationView的layout_gravity搭配使用-->
     <include
         layout="@layout/item_content"
         android:layout_width="match_parent"
@@ -21,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:fitsSystemWindows="true"
         app:headerLayout="@layout/item_navigate"/>
 
 </android.support.v4.widget.DrawerLayout>
